@@ -3,8 +3,41 @@
 <head>
     <title>Mjäu</title> 
     <link rel="icon" type="image/x-icon" href="mina.jpg">
-    <img src="mina.jpg" alt ="AAAAAAA" style="width: 1920px;height: 333px;margin-top: 300px">
+    <img id="image" src="mina.jpg" alt ="AAAAAAA" style="width: 500px;height: 100px"/>
 
+    <h1 style = "position:fixed; top: 0%; left: 50%; color: chartreuse;">Kasuta nooli...</h1>
+    <script>
+
+        var mina = document.getElementById("image");
+        var x = 50;
+        var y = 50;
+
+        window.addEventListener("keydown", function(event){
+            if (event.key == "ArrowLeft"){
+                x -= 50;
+                mina.style.marginLeft = x + "px";
+            }
+            else if(event.key == "ArrowUp"){
+                y -= 50;
+                mina.style.marginTop = y + "px";
+                
+            }
+            else if(event.key == "ArrowRight"){
+                x += 50;
+                mina.style.marginLeft = x + "px";
+                
+            }
+            else if(event.key == "ArrowDown"){
+                y += 50;
+                mina.style.marginTop = y + "px";
+                
+            }
+        })
+
+    
+    </script>
+
+    
 
 </head>
 </html>
